@@ -32,10 +32,12 @@ main {
 }
 
 footer {
-    height: 4vh;
+    height: 0vh;
 }
 
 #about {
+    height: 70vh;
+    overflow: auto;
     padding: 5vh 10vw;
 }
 
@@ -54,13 +56,17 @@ footer {
     text-shadow: 3px 3px grey;
 }
 
-/*@media screen and (min-width: 48em) {
-    #title {
-        font-size: 32px;
-    }
-}*/
-
 #video {
     padding: 5vh 10vw;
     height: 70vh;
+}
+
+@media screen and (max-width: 48em) {
+    #about {
+        height: 40vh;
+    }
+    
+    #video {
+        height: 40vh;
+    }
 }
