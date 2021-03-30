@@ -2,8 +2,18 @@
 
 function getHTML(route) {
     return window.fetch(route + '.html')
-                 .then(x => x.text())
-                 .catch(e => console.error(e) && alert('Error occured, please reload the page and try again.'));
+        .then(response => {
+            if (response.ok) {
+                return response.text();
+            } else {
+                throw new Error('Error, please refresh the page an try again.');
+            }
+        })
+        .catch(e => {
+            console.error(e);
+            alert(e.toString());
+            return '';
+        });
 }
 
 function getRouteFromUrl() {
