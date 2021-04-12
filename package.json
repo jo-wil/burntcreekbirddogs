@@ -1,0 +1,22 @@
+{
+  "name": "burntcreekbirddogs",
+  "version": "1.0.0",
+  "description": "Maggies Dog Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jo-wil/burntcreekbirddogs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jo-wil/burntcreekbirddogs/issues"
+  },
+  "homepage": "https://github.com/jo-wil/burntcreekbirddogs#readme",
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
+}
