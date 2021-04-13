@@ -1,14 +1,10 @@
 "use strict";
 
 var PICTURES = {
-  general: ["dogs.jpg", "dogs.jpg", "dogs.jpg", "dogs.jpg"],
-  upland: ["dogs.jpg", "dogs.jpg", "dogs.jpg"],
-  waterfowl: ["dogs.jpg", "dogs.jpg"],
+  general: ["general_1.jpg", "general_2.jpg", "general_3.jpg", "general_4.jpg", "general_5.jpg"],
+  upland: ["upland_1.jpg", "upland_2.jpg", "upland_3.jpg", "upland_4.jpg", "upland_5.jpg", "upland_6.jpg", "upland_7.jpg", ],
+  waterfowl: ["waterfowl_1.jpg", "waterfowl_2.jpg"],
 };
-
-function capitalizeFirstLetter(s) {
-  return s.charAt(0).toUpperCase() + s.slice(1);
-}
 
 function getCarouselIndicatorsHTML(_, index) {
   return `<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="${index}" class="${
@@ -21,6 +17,14 @@ function getCarouselInnerHTML(link, index) {
       <div class="carousel-item ${index === 0 ? "active" : ""}">
         <img src="static/${link}" class="d-block w-100" alt="Picture of dogs">
       </div>`;
+}
+
+function getCategoryHTML(s) {
+  if (s === 'general') {
+    return '';
+  } else {
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
 }
 
 function getHTML(route) {
@@ -57,7 +61,7 @@ function onHashChange(event) {
         .join("\n");
       var carouselInnerHTML = pictures.map(getCarouselInnerHTML).join("\n");
       document.querySelector("main").innerHTML = html
-        .replace("category", capitalizeFirstLetter(category))
+        .replace("category", getCategoryHTML(category))
         .replace("carousel-indicators-html", carouselIndicatorsHTML)
         .replace("carousel-inner-html", carouselInnerHTML);
     } else {
