@@ -1,9 +1,9 @@
 "use strict";
 
 var PICTURES = {
-  general: ["general_1.jpg", "general_2.jpg", "general_3.jpg", "general_4.jpg", "general_5.jpg"],
-  upland: ["upland_1.jpg", "upland_2.jpg", "upland_3.jpg", "upland_4.jpg", "upland_5.jpg", "upland_6.jpg", "upland_7.jpg", ],
-  waterfowl: ["waterfowl_1.jpg", "waterfowl_2.jpg"],
+  general: ["general_1.jpg", "general_2.jpg", "general_3.jpg", "general_4.jpg", "general_5.jpg", "general_6.jpg", "general_7.jpg", "general_8.jpg", "general_9.jpg", "general_10.jpg", "general_11.jpg",],
+  upland: ["upland_1.jpg", "upland_2.jpg", "upland_3.jpg", "upland_4.jpg", "upland_5.jpg", "upland_6.jpg", "upland_7.jpg", "upland_8.jpg"],
+  waterfowl: ["waterfowl_1.jpg", "waterfowl_2.jpg", "waterfowl_3.jpg"],
 };
 
 function getCarouselIndicatorsHTML(_, index) {
