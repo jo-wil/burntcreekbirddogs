@@ -25,6 +25,10 @@ function onHashChange(event) {
   var route = getRouteFromUrl() || "home";
   getHTML(route).then((html) => {
     document.querySelector("main").innerHTML = html;
+    if (route === "photosandvideos") {
+      // This loads instagram
+      window.instgrm.Embeds.process();
+    }
   });
 }
 
